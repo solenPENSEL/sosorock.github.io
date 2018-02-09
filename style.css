@@ -1,0 +1,35 @@
+.thumbnail:hover .back {
+	transform: rotateY(0deg);
+}
+
+.thumbnail:hover .front {
+	transform: rotateY(-180deg);
+}
+
+.card {
+	transform-style: preserve-3d;
+	perspective: 600px;
+	position: relative;
+}
+
+.thumbnail .card div img {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.back, .front {
+	position: relative;
+	backface-visibility: hidden;
+	transition: transform 1s ease-in;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+.front {
+	background: url('back_card.png');
+}
