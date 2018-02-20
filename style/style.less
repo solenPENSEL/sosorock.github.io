@@ -13,38 +13,52 @@
   }*/
 
   from {
-    margin-left: 100%;
-    width: 100%; 
+    left: 200%;
+   // width: 100%; 
   }
 
   to {
-    margin-left: 0%;
-    width: 100%;
+    left: 0%;
+   // width: 100%;
   }
 }
 
+.logo{
+  position: relative;
+  bottom: 5px;
+}
 
+.reset{
+  position: relative;
+  top: 7px;
+  right: 1%;
+}
+
+.card-select{
+  margin: 0 auto;
+  display: inline-flex;
+}
 
 body {
     padding-top: 70px ; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-  .thumb{
+  .card{
    /* margin-bottom: 30px;
     max-width: 300px;
     min-width: 300px;*/
     animation-name: dropCards;
     animation-iteration-count: 1;
     animation-timing-function: ease-in-out;
-    animation-duration: 0.8s;
+    animation-duration: 1.4s;
 
     animation-direction: alternate;
 
     .thumbnail{
       background-color:black;
-      background-image: url(img/card_back.jpg);
-      background-size: 270px 150px;
+      background-image: url(../img/card_back.jpg);
+      background-size: contain;
       transition: transform 1s;
       transition-timing-function: ease-in-out;
-     /* cursor: pointer;*/ 
+      cursor: pointer;
       img{
         opacity:0;
         transition: opacity 0.1s, transform 0.1s;
@@ -56,23 +70,32 @@ body {
         opacity:0;
         transition: opacity 0.1s, transform 0.1s;
         transition-delay: 0.5s;
+        background-color: black;
         color:white;
       }
-      &:hover {
+    }
+    .rotated {
+      transform: rotateY(180deg);
+      img{
+        opacity: 1;
+        z-index: 5;
         transform: rotateY(180deg);
-        img{
-          opacity: 1;
-          transform: rotateY(180deg);
-        }
-        .champName{
-          opacity: 1;
-          transform: rotateY(180deg);
-        }
+      }
+      .champName{
+        opacity: 1;
+        z-index: 10;
+        transform: rotateY(180deg);
       }
     }
   }
 }
 
 footer {
-    margin: 50px 0; /*pq?*/
+  position: fixed;
+  left: 100;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(131, 131, 155, 0.356);
+  color: black;
+  text-align: center;
 }
