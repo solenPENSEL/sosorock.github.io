@@ -79,14 +79,9 @@ function resetCards() {
     });
   }
 
-  if (cardsWon.length == numberCards) {
-    youWin();
-  }
+
 
   console.log("Emptying opened cards");
   cardsCurrentlyOpened = [];
 }
 
-function youWin() {
-  alert("YOU WON!");
-}
