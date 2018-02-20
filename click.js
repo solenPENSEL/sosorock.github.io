@@ -57,9 +57,7 @@ function resetCards() {
     console.log("Same cards== lock rotated");
     cardsWon.push(cardsCurrentlyOpened[0]);
     $(".champName").each(function(index) {
-      if ($(this).text() == cardsCurrentlyOpened[0]) {
-        $(this).css("background-color", "darkgreen");
-      }
+     
     });
   } else {
     console.log("Put cards back again");
